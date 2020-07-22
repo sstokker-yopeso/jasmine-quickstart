@@ -13,6 +13,36 @@
             return !bool;
         }
 
+        function add(x, y) {
+            return x + y;
+        }
+
+        function minus(x, y) {
+            return x - y;
+        }
+
+        describe('Math functions', () => {
+
+            let num1;
+            let num2;
+
+            beforeEach(() => {
+                num1 = 2;
+                num2 = 3;
+            });
+
+            it('Gets the sum of 2 numbers', () => {
+                const result = add(num1, num2);
+                expect(result).toBe(5);
+                expect(result).not.toBeGreaterThan(6);
+            });
+
+            it('Gets the difference of 2 numbers', () => {
+                const result = minus(num1, num2);
+                expect(result).toBe(-1);
+            });
+        });
+
         describe('Write Your Test Group Descriptions Here', () => {
             it('Write Your Test Expectation Here', () => {
                 // arrange
@@ -23,7 +53,7 @@
 
                 // assert
                 expect(result).toBe(true);
-            })
+            });
         });
     </script>
 </head>
